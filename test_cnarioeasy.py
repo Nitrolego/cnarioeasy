@@ -108,8 +108,10 @@ def test_logout_user(playwright: Playwright):
     #test: click the logout button
     page.get_by_role("button", name="Logout").click()
 
-    #assert: error message is visible
+    #assert: logout successful (see login form)
     expect(page.get_by_role("heading", name="Login", exact=True)).to_be_visible()
+    expect(page.get_by_role("textbox", name="Username")).to_be_empty()
+    expect(page.get_by_role("textbox", name="Password")).to_be_empty()
     
     #clean up
     context.close()
@@ -134,8 +136,10 @@ def test_logout_admin(playwright: Playwright):
     #test: click the logout button
     page.get_by_role("button", name="Logout").click()
 
-    #assert: error message is visible
+    #assert: logout successful (see login form)
     expect(page.get_by_role("heading", name="Login", exact=True)).to_be_visible()
+    expect(page.get_by_role("textbox", name="Username")).to_be_empty()
+    expect(page.get_by_role("textbox", name="Password")).to_be_empty()
     
     #clean up
     context.close()
