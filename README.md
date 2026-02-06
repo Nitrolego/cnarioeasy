@@ -17,16 +17,23 @@ It serves as a **portfolio project** showcasing real-world QA automation skills.
 
 ## Install Dependencies
 ```pip install -r requirements.txt
-playwright install```
+playwright install
+```
 
 ---
 
 ## Running the Tests
 Run all tests:
-```pytest```
+```
+pytes
+```
 
 Run in headed mode:
-```pytest --headed```
+```
+pytest --headed
+```
 
 Run a specific test file:
-```pytest test_example.py```
+```
+pytest test_example.py
+```
